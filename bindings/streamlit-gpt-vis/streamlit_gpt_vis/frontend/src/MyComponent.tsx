@@ -7,14 +7,14 @@ import React, { ReactNode } from "react"
 import {
   ConfigProvider,
   GPTVis,
-  // VisText,
-  // withDefaultChartCode,
-  // ChartType,
-  // DualAxes,
-  // Radar,
-  // Histogram,
-  // Treemap,
-  // WordCloud,
+  VisText,
+  withDefaultChartCode,
+  ChartType,
+  DualAxes,
+  Radar,
+  Histogram,
+  Treemap,
+  WordCloud,
 } from "@antv/gpt-vis"
 
 interface State {
@@ -29,18 +29,18 @@ class MyComponent extends StreamlitComponentBase<State> {
   public state = { numClicks: 0 }
 
   private components = {
-    // "vis-text": VisText,
-    // code: withDefaultChartCode({
-    //   components: {
-    //     [ChartType.DualAxes]: DualAxes,
-    //     [ChartType.Radar]: Radar,
-    //     [ChartType.Histogram]: Histogram,
-    //     [ChartType.Treemap]: Treemap,
-    //     [ChartType.WordCloud]: WordCloud,
-    //   },
-    //   loadingTimeout: 5,
-    //   debug: false,
-    // }),
+    "vis-text": VisText,
+    code: withDefaultChartCode({
+      components: {
+        [ChartType.DualAxes]: DualAxes,
+        [ChartType.Radar]: Radar,
+        [ChartType.Histogram]: Histogram,
+        [ChartType.Treemap]: Treemap,
+        [ChartType.WordCloud]: WordCloud,
+      },
+      loadingTimeout: 5,
+      debug: false,
+    }),
   }
 
   public render = (): ReactNode => {

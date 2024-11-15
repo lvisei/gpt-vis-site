@@ -14,7 +14,6 @@ pip install streamlit-gpt-vis
 
 ```python
 import streamlit as st
-
 from streamlit_gpt_vis import set_gpt_vis
 
 content = '''

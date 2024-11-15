@@ -20,7 +20,7 @@ _RELEASE = True
 
 if not _RELEASE:
     _component_func = components.declare_component(
-        # We give the component a simple, descriptive name ("my_component"
+        # We give the component a simple, descriptive name ("set_gpt_vis"
         # does not fit this bill, so please choose something better for your
         # own component :)
         "set_gpt_vis",
@@ -44,24 +44,18 @@ else:
 # our component's API: we can pre-process its input args, post-process its
 # output value, and add a docstring for users.
 def set_gpt_vis(content, config=None, key=None):
-    """Create a new instance of "my_component".
+    """Create a new instance of "set_gpt_vis".
 
     Parameters
     ----------
-    name: str
-        The name of the thing we're saying hello to. The component will display
-        the text "Hello, {name}!"
+    content: str
+        The Markdown content
+    config: dict
+        GPT-Vis [ConfigProvider](https://github.com/antvis/GPT-Vis/blob/main/src/ConfigProvider/index.md) config
     key: str or None
         An optional key that uniquely identifies this component. If this is
         None, and the component's arguments are changed, the component will
         be re-mounted in the Streamlit frontend and lose its current state.
-
-    Returns
-    -------
-    int
-        The number of times the component's "Click Me" button has been clicked.
-        (This is the value passed to `Streamlit.setComponentValue` on the
-        frontend.)
 
     """
     # Call through to our private component function. Arguments we pass here

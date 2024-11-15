@@ -9,7 +9,7 @@ import setuptools
 here = os.path.abspath(os.path.dirname(__file__))
 
 __title__ = "streamlit-gpt-vis"
-__version__ = "0.0.1"
+__version__ = "0.0.2"
 
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()

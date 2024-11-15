@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_gpt_vis import gpt_vis_renderer
+from streamlit_gpt_vis import set_gpt_vis
 
 # Add some test code to play with the component while it's in development.
 # During development, we can run this just as we would any other Streamlit
@@ -9,7 +9,7 @@ st.subheader("Component with constant args")
 
 # Create an instance of our component with a constant `content` arg, and
 # print its output value.
-gpt_vis_renderer('''
+set_gpt_vis('''
 # GPT-VIS \n\nComponents for GPTs, generative AI, and LLM projects. Not only UI Components.
 
 Here’s a visualization of Haidilao's food delivery revenue from 2013 to 2022. You can see a steady increase over the years, with notable *growth* particularly in recent years.
@@ -27,7 +27,7 @@ st.markdown("---")
 
 st.subheader("Component with vis text")
 
-gpt_vis_renderer('''
+set_gpt_vis('''
 <vis-text type="time_desc">本月</vis-text>共产生<vis-text type="metric_name">决策数量</vis-text><vis-text type="metric_value">2,783</vis-text>个，环比<vis-text type="trend_desc">增长</vis-text><vis-text type="ratio_value_pos">15.2%</vis-text>。<vis-text type="dim_name">高优先级决策</vis-text>占比<vis-text type="proportion">56.2%</vis-text>，呈现稳定<vis-text type="trend_desc" origin="[1, 2, 6, 18, 24, 48]">上升</vis-text>趋势，预计<vis-text type="time_desc">下月</vis-text>将突破<vis-text type="metric_value">3,000</vis-text>大关。
 ''')
 
@@ -46,4 +46,4 @@ st.subheader("Component with variable args")
 # "content" argument without having it get recreated.
 content_input = st.text_input("Enter render content", value="#### GPT-VIS \n\n Components for GPTs, generative AI, and LLM projects. Not only UI Components.")
 
-gpt_vis_renderer(content_input, config={'plot': { 'theme': { 'type': 'academy' }}})
+set_gpt_vis(content_input, config={'plot': { 'theme': { 'type': 'academy' }}})

@@ -15,7 +15,7 @@ pip install streamlit-gpt-vis
 ```python
 import streamlit as st
 
-from streamlit_gpt_vis import gpt_vis_renderer
+from streamlit_gpt_vis import set_gpt_vis
 
 content = '''
 # GPT-VIS \n\nComponents for GPTs, generative AI, and LLM projects. Not only UI Components.
@@ -27,14 +27,14 @@ Here’s a visualization of Haidilao's food delivery revenue from 2013 to 2022. 
 \`\`\`
 '''
 
-gpt_vis_renderer(content, config=None)
+set_gpt_vis(content)
 ```
 
 ## API
 
-### gpt_vis_renderer(content: str, config: dict = None)
+### `set_gpt_vis(content: str, config: dict = None)`
 
-- content： Markdown content
+- content：Markdown content
 - config: GPT-Vis [ConfigProvider](https://github.com/antvis/GPT-Vis/blob/main/src/ConfigProvider/index.md) config
 
 ## License

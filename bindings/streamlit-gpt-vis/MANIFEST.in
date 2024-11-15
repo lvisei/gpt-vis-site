@@ -1,1 +1,1 @@
-recursive-include streamlit_gpt_vis/frontend/build *
+recursive-include streamlit_gpt_vis/frontend/dist *

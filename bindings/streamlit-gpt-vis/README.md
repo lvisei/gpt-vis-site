@@ -1,14 +1,16 @@
 # streamlit-gpt-vis
 
-Components for GPTs, generative AI, and LLM projects. Not only UI Components.
+[![Latest Stable Version](https://img.shields.io/pypi/v/streamlit-gpt-vis.svg)](https://pypi.python.org/pypi/streamlit-gpt-vis) [![Pypi Download](https://img.shields.io/pypi/dm/streamlit-gpt-vis)](https://pypi.python.org/pypi/streamlit-gpt-vis)
 
-## Installation instructions
+Streamlit binding for [`@AntV/GPT-Vis`](https://github.com/antvis/GPT-Vis) Components for GPTs, generative AI, and LLM projects. Not only UI Components.
+
+## Installation
 
 ```sh
 pip install streamlit-gpt-vis
 ```
 
-## Usage instructions
+## Usage
 
 ```python
 import streamlit as st
@@ -27,3 +29,14 @@ Here’s a visualization of Haidilao's food delivery revenue from 2013 to 2022. 
 
 gpt_vis_renderer(content, config=None)
 ```
+
+## API
+
+### gpt_vis_renderer(content: str, config: dict = None)
+
+- content： Markdown content
+- config: GPT-Vis [ConfigProvider](https://github.com/antvis/GPT-Vis/blob/main/src/ConfigProvider/index.md) config
+
+## License
+
+[MIT](./LICENSE)

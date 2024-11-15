@@ -16,7 +16,11 @@ Here’s a visualization of Haidilao's food delivery revenue from 2013 to 2022. 
 
 ```vis-chart
 { "type": "line","data": [{"time":2013,"value":59.3},{"time":2014,"value":64.4},{"time":2015,"value":68.9},{"time":2016,"value":74.4},{"time":2017,"value":82.7},{"time":2018,"value":91.9},{"time":2019,"value":99.1},{"time":2020,"value":101.6},{"time":2021,"value":114.4},{"time":2022,"value":121}] }
-```   
+```
+
+```vis-chart
+{ "type":"network-graph","data":{"nodes":[{"name":"哈利·波特"},{"name":"赫敏·格兰杰"},{"name":"罗恩·韦斯莱"},{"name":"伏地魔"}],"edges":[{"source":"哈利·波特","target":"赫敏·格兰杰","name":"朋友"},{"source":"哈利·波特","target":"罗恩·韦斯莱","name":"朋友"},{"source":"哈利·波特","target":"伏地魔","name":"敌人"},{"source":"伏地魔","target":"哈利·波特","name":"试图杀死"}]} }
+```
 ''')
 
 st.markdown("---")
@@ -40,6 +44,6 @@ st.subheader("Component with variable args")
 # it is considered a new instance and will be re-mounted on the frontend
 # and lose its current state. In this case, we want to vary the component's
 # "content" argument without having it get recreated.
-content_input = st.text_input("Enter render content", value="# GPT-VIS \n\nComponents for GPTs, generative AI, and LLM projects. Not only UI Components.")
+content_input = st.text_input("Enter render content", value="#### GPT-VIS \n\n Components for GPTs, generative AI, and LLM projects. Not only UI Components.")
 
 gpt_vis_renderer(content_input, config={'plot': { 'theme': { 'type': 'academy' }}})
